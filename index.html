@@ -12,12 +12,10 @@
   <body class="mixpanel-platform-body" style="overflow-x:scroll;">
     <div id="datePicker" style="float: left;"></div>
     <div style="clear: both;"></div>
-    
-    <h1>Hello, World!</h1>
     <script>
-      $('#datePicker').MPDatepicker().on('change', function(dateRange) {
-       console.log(dateRange.from);
-       console.log(dateRange.to);
+      $('#datePicker').MPDatepicker().on('change', function(dates) {
+       console.log(dates.from);
+       console.log(dates.to);
       });
       // MP.api.segment('View Screen', 'Screen').done(function(queryResults) {
       //   console.log(queryResults.values());
