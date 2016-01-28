@@ -19,6 +19,9 @@
        console.log(dateRange.from);
        console.log(dateRange.to);
       });
+      MP.api.segment('Homepage view', '$browser').done(function(queryResults) {
+        console.log(queryResults.values());
+      });
       // Run queries and display results here
     </script>
   </body>
