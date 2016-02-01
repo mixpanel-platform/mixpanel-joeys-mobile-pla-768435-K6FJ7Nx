@@ -17,10 +17,10 @@
        console.log(dates.from);
        console.log(dates.to);
       });
-      // MP.api.segment('View Screen', 'Screen').done(function(queryResults) {
-      //   console.log(queryResults.values());
-      // });
-      // Run queries and display results here
+      MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
+        console.log(queryResults.values());
+      });
+      Run queries and display results here
     </script>
   </body>
 </html>
