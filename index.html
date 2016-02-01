@@ -19,7 +19,7 @@
        console.log(dates.to);
       });
       var lineChart = $('#lineChart').MPChart({chartType: 'line'});
-      var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryresults){
+      var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults){
         lineChart.MPChart('setData', queryResults);
       })
     </script>
