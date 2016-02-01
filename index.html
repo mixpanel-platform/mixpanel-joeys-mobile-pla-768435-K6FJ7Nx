@@ -29,7 +29,7 @@
               lineChart.MPChart('setData', queryResults, dateRange);
             });
       }
-      daterange.on('change', function(e, eventName) {
+      dateRange.on('change', function(e, eventName) {
           propSelect.MPPropertySelect('setEvent', eventName);
           $("#by").show();
           runQuery();
