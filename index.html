@@ -20,9 +20,9 @@
       });
       var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
         console.log(queryResults.values());
+        return queryResults
       });
-      var lineChart = $('#chart').MPChart({chartType: 'line'});
-      lineChart.MPChart('setData', data);
+      $('#chart').MPChart({chartType: 'line', data: data});
     </script>
   </body>
 </html>
