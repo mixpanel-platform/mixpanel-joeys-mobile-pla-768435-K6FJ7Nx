@@ -11,15 +11,17 @@
   </head>
   <body class="mixpanel-platform-body" style="overflow-x:scroll;">
     <div id="datePicker" style="float: left;"></div>
+    <div id="chart"></div>
     <div style="clear: both;"></div>
     <script>
       $('#datePicker').MPDatepicker().on('change', function(e, dates) {
        console.log(dates.from);
        console.log(dates.to);
       });
-      MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
+      var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
         console.log(queryResults.values());
       });
+      $('#chart').MPChart({chartType: 'line', data: data});
     </script>
   </body>
 </html>
