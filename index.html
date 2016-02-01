@@ -26,7 +26,7 @@
             propName  = propSelect.MPPropertySelect('value'),
             dateRange = dateSelect.MPDatepicker('value');
             MP.api.segment(eventName, propName).done(function(queryResults){
-              lineChart.MPChart('setData', queryResults, daterange);
+              lineChart.MPChart('setData', queryResults, dateRange);
             });
       }
       daterange.on('change', runQuery);
