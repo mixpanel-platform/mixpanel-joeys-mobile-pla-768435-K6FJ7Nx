@@ -18,7 +18,7 @@
       var daterange = $('#datePicker').MPDatepicker();
       var eventSelect = $('#eventSelect').MPEventSelect();
       var runQuery = function(){
-        var eventName = eventSelect.MPEventSelect('value'),
+        var eventName = eventSelect.MPEventSelect('vevealue'),
             propName  = propSelect.MPPropertySelect('value'),
             dateRange = dateSelect.MPDatepicker('value');
             MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults){
@@ -26,7 +26,7 @@
             });
       }
       daterange.on('change', runQuery);
-      eventlist.on('change', runQuery);
+      eventSelect.on('change', runQuery);
     </script>
   </body>
 </html>
