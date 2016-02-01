@@ -11,12 +11,12 @@
   </head>
   <body class="mixpanel-platform-body" style="overflow-x:scroll;">
     <div id="datePicker" style="float: left;"></div>
-    <div id="eventSelect" style="float: left"></div>
+    <div id="eventSelect" style="float: right"></div>
     <div id="lineChart"></div>
     <div style="clear: both;"></div>
     <script>
       var daterange = $('#datePicker').MPDatepicker();
-      var eventlist = $('#eventSelect').MPEventSelect();
+      var eventSelect = $('#eventSelect').MPEventSelect();
       var runQuery = function(){
         var eventName = eventSelect.MPEventSelect('value'),
             propName  = propSelect.MPPropertySelect('value'),
