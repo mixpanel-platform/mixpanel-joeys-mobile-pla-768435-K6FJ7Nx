@@ -17,7 +17,6 @@
       var daterange = $('#datePicker').MPDatepicker().on('change', function(e, dates) {
        console.log(dates.from);
        console.log(dates.to);
-       return dates;
       });
       var lineChart = $('#lineChart').MPChart({chartType: 'line'});
       var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults){
