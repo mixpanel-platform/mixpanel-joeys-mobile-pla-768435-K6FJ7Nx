@@ -18,7 +18,7 @@
        console.log(dates.from);
        console.log(dates.to);
       });
-      var lineChart = $('#lineChart').MPChart({chartType: 'line'});
+      var lineChart = $('#lineChart').MPChart({chartType: 'bar'});
       var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults){
         lineChart.MPChart('setData', queryResults);
       })
