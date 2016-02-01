@@ -21,7 +21,8 @@
       var data = MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
         console.log(queryResults.values());
       });
-      $('#chart').MPChart({chartType: 'line', data: data});
+      var linechart = $('#chart').MPChart({chartType: 'line'});
+      lineChart.MPChart('setData', data);
     </script>
   </body>
 </html>
