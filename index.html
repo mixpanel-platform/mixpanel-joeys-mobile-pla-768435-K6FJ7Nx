@@ -13,14 +13,14 @@
     <div id="datePicker" style="float: left;"></div>
     <div style="clear: both;"></div>
     <script>
-      $('#datePicker').MPDatepicker().on('change', function(dates) {
+      $('#datePicker').MPDatepicker().on('change', function(e, dates) {
        console.log(dates.from);
        console.log(dates.to);
       });
       MP.api.segment('Viewed Screen', 'Screen').done(function(queryResults) {
         console.log(queryResults.values());
       });
-      // Run queries and display results here
+      Run queries and display results here
     </script>
   </body>
 </html>
